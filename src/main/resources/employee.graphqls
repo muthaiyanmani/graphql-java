@@ -1,0 +1,22 @@
+type Employee {
+  name: String
+  email: String
+  mobile: String
+  salary: String
+}
+
+input EmployeeInput {
+  name: String!
+  email: String!
+  mobile: String!
+  salary: String
+}
+
+type Query {
+  getEmployees: [Employee]
+  getEmployeeById(empId: ID): Employee
+}
+
+type Mutation {
+  addEmployee(name:String,email:String,mobile:String,salary:String): Employee
+}
